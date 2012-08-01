@@ -38,3 +38,8 @@ gem 'jquery-rails'
 
 # To use debugger
 gem 'haml'
+
+# To use assertions
+group :development, :test do
+  gem 'rspec-rails'
+end

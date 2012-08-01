@@ -24,8 +24,16 @@ Background: movies have been added to database
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
   # your steps here
+  Then I check the following ratings: G, PG, PG-13, R
+  And I press "Refresh"
+  Then I should see all the movies 
+  And I should see "2001: A Space Odyssey" before "Aladdin"
+  
 
 Scenario: sort movies in increasing order of release date
-  When i follow "Release Date"
+  When I follow "Release Date"
   # your steps here
-
+  Then I check the following ratings: G, PG, PG-13, R
+  And I press "Refresh"
+  Then I should see all the movies 
+  Then I should see "Chicken Run" before "Amelie"
